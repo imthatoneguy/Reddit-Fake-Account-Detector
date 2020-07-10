@@ -19,6 +19,7 @@ im_thatoneguy addition:
 Then run slashUAnalysis_v4 (will require relinking file paths) and 3GB reddit CSVs
 
 https://www.reddit.com/r/pushshift/comments/9i8s23/dataset_metadata_for_69_million_reddit_users_in/
+
 How it works
 ============
 The markov chain first 'trains' or 'studies' a few MB of English text, recording how often characters appear next to each other. Eg, given the text "Rob likes hacking" it sees Ro, ob, o[space], [space]l, ... It just counts these pairs. After it has finished reading through the training data, it normalizes the counts. Then each character has a probability distribution of 27 followup character (26 letters + space) following the given initial.

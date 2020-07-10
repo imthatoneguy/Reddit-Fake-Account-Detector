@@ -15,26 +15,10 @@ First train the model:
 
 python gib_detect_train.py
 
-Then try it on some sample input
+im_thatoneguy addition:
+Then run slashUAnalysis_v4 (will require relinking file paths) and 3GB reddit CSVs
 
-python gib_detect.py
-
-my name is rob and i like to hack True
-
-is this thing working? True
-
-i hope so True
-
-t2 chhsdfitoixcv False
-
-ytjkacvzw False
-
-yutthasxcvqer False
-
-seems okay True
-
-yay! True
-
+https://www.reddit.com/r/pushshift/comments/9i8s23/dataset_metadata_for_69_million_reddit_users_in/
 How it works
 ============
 The markov chain first 'trains' or 'studies' a few MB of English text, recording how often characters appear next to each other. Eg, given the text "Rob likes hacking" it sees Ro, ob, o[space], [space]l, ... It just counts these pairs. After it has finished reading through the training data, it normalizes the counts. Then each character has a probability distribution of 27 followup character (26 letters + space) following the given initial.
